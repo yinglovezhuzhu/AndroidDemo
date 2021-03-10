@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态，X和Y缩放到110% -->
+    <item android:state_pressed="true">
+        <set>
+            <objectAnimator android:propertyName="scaleX"
+                android:duration="300"
+                android:valueTo="1.1"
+                android:valueType="floatType"/>
+            <objectAnimator android:propertyName="scaleY"
+                android:duration="300"
+                android:valueTo="1.1"
+                android:valueType="floatType"/>
+            <objectAnimator android:propertyName="colorFilter"
+                android:duration="300"
+                android:valueTo="#33FF0000"
+                android:valueType="colorType"/>
+        </set>
+    </item>
+    <!-- 正常状态，X和Y缩放到100% -->
+    <item>
+        <set>
+            <objectAnimator android:propertyName="scaleX"
+                android:duration="300"
+                android:valueTo="1"
+                android:valueType="floatType"/>
+            <objectAnimator android:propertyName="scaleY"
+                android:duration="300"
+                android:valueTo="1"
+                android:valueType="floatType"/>
+            <objectAnimator android:propertyName="colorFilter"
+                android:duration="300"
+                android:valueTo="#00000000"
+                android:valueType="colorType"/>
+        </set>
+    </item>
+</selector>

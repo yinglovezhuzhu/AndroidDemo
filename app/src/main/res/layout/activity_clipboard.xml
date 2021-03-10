@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/label1"
+        android:text="源文本"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="@+id/btnCopy"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCopy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnCopy"/>
+    <Button
+        android:id="@+id/btnCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="复制" />
+    <EditText
+        android:id="@+id/etSource"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="left|top"
+        app:layout_constraintTop_toBottomOf="@+id/label1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_center_vertical"/>
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="目标文本"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnParse"
+        app:layout_constraintTop_toTopOf="@+id/btnParse"
+        app:layout_constraintBottom_toBottomOf="@+id/btnParse"/>
+    <Button
+        android:id="@+id/btnParse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_center_vertical"
+        android:text="粘贴"/>
+    <EditText
+        android:id="@+id/etDest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="left|top"
+        app:layout_constraintTop_toBottomOf="@+id/label2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

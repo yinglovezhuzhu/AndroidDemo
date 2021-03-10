@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:repeatMode="reverse"
+    android:repeatCount="infinite">
+    <propertyValuesHolder android:propertyName="alpha" android:valueType="floatType">
+        <keyframe android:valueType="floatType" android:fraction="0.0" android:value="1.0" />
+        <keyframe android:valueType="floatType" android:fraction="0.5" android:value="0.2" />
+        <keyframe android:valueType="floatType" android:fraction="1.0" android:value="0.0" />
+    </propertyValuesHolder>
+    <propertyValuesHolder android:propertyName="scaleX" android:valueType="floatType" android:valueFrom="1.0" android:valueTo="2.0" />
+    <propertyValuesHolder android:propertyName="scaleY" android:valueType="floatType" android:valueFrom="1.0" android:valueTo="2.0" />
+</objectAnimator>

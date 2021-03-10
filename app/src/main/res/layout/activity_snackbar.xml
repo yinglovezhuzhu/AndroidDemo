@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="50dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips"
+            android:onClick="onClick"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Snackbar提示" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips2"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_snackbar_tips"
+            android:text="Snackbar提示2(带Action)" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips3"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_snackbar_tips2"
+            android:text="Snackbar提示3(自定义属性)" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips4"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_snackbar_tips3"
+            android:text="Snackbar提示4(带回调)" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips5"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_snackbar_tips4"
+            android:text="Snackbar提示5(指定显示位置)" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_snackbar_tips6"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_snackbar_tips5"
+            android:text="Snackbar提示6(自定义布局)" />
+
+        <View
+            android:id="@+id/bottomAnchor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
