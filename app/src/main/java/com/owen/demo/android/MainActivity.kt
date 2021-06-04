@@ -19,9 +19,12 @@ import com.owen.demo.android.clipboard.ClipboardActivity
 import com.owen.demo.android.cview.PieChartActivity
 import com.owen.demo.android.drawable.PaletteActivity
 import com.owen.demo.android.drawable.VectorDrawableActivity
+import com.owen.demo.android.opengl.GLES20Activity
 import com.owen.demo.android.pip.PIPActivity
 import com.owen.demo.android.refresh.SwipeRefreshActivity
+import com.owen.demo.android.room.RoomDBActivity
 import com.owen.demo.android.snackbar.SnackbarActivity
+import com.owen.demo.android.storage.StorageActivity
 import com.owen.demo.android.ui.UIActivity
 import com.owen.recyclerview.demo.MainItemData
 
@@ -50,6 +53,9 @@ class MainActivity : AppCompatActivity() {
                     add(MainItemData("VectorDrawable", "矢量图"))
                     add(MainItemData("动力学动画", "DynamicAnimation"))
                     add(MainItemData("调色板", "Pallete调色板库"))
+                    add(MainItemData("OpenGL ES", "OpenGL ES示例"))
+                    add(MainItemData("数据存储", "Android数据存储相关"))
+                    add(MainItemData("Room Database", "Android Jetpack Room Database"))
                 }
                 addData(list)
             }
@@ -102,6 +108,15 @@ class MainActivity : AppCompatActivity() {
                                     }
                                     9 -> {
                                         startActivity(Intent(this@MainActivity, PaletteActivity::class.java))
+                                    }
+                                    10 -> {
+                                        startActivity(Intent(this@MainActivity, GLES20Activity::class.java))
+                                    }
+                                    11 -> {
+                                        startActivity(Intent(this@MainActivity, StorageActivity::class.java))
+                                    }
+                                    12 -> {
+                                        startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
                                     }
                                 }
                             }
